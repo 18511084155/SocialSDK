@@ -1,4 +1,4 @@
-package com.encore.actionnow;
+package com.woodys.socialdemo;
 
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -9,12 +9,13 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.woodys.socialdemo.R;
 import com.woodys.socialsdk.SocialSDK;
 import com.woodys.socialsdk.model.SocialToken;
 import com.woodys.socialsdk.model.SocialUser;
 import com.woodys.socialsdk.otto.BusProvider;
 import com.woodys.socialsdk.otto.SSOBusEvent;
-import com.encore.actionnow.app.BaseActivity;
+import com.woodys.socialdemo.app.BaseActivity;
 import com.squareup.otto.Subscribe;
 
 import butterknife.Bind;

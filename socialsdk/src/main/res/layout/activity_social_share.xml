@@ -32,7 +32,7 @@
         android:paddingLeft="25dp"
         android:paddingRight="25dp">
 
-        <com.woodys.socialsdk.view.ShareButton
+        <com.woodys.socialsdk.view.ShareView
             android:id="@+id/social_share_sb_wechat"
             android:layout_width="0.0dip"
             android:layout_height="wrap_content"
@@ -41,7 +41,7 @@
             app:description="@string/social_share_wechat"
             app:icons="@drawable/icon_wechat" />
 
-        <com.woodys.socialsdk.view.ShareButton
+        <com.woodys.socialsdk.view.ShareView
             android:id="@+id/social_share_sb_wechat_timeline"
             android:layout_width="0.0dip"
             android:layout_height="wrap_content"
@@ -50,7 +50,7 @@
             app:description="@string/social_share_wechat_timeline"
             app:icons="@drawable/icon_wechat_timeline" />
 
-        <com.woodys.socialsdk.view.ShareButton
+        <com.woodys.socialsdk.view.ShareView
             android:id="@+id/social_share_sb_weibo"
             android:layout_width="0.0dip"
             android:layout_height="wrap_content"
@@ -71,7 +71,7 @@
         android:paddingRight="25dp"
         android:visibility="gone">
 
-        <com.woodys.socialsdk.view.ShareButton
+        <com.woodys.socialsdk.view.ShareView
             android:id="@+id/social_share_sb_qq"
             android:layout_width="0.0dip"
             android:layout_height="wrap_content"
@@ -80,7 +80,7 @@
             app:description="@string/social_share_qq"
             app:icons="@drawable/icon_qq" />
 
-        <com.woodys.socialsdk.view.ShareButton
+        <com.woodys.socialsdk.view.ShareView
             android:id="@+id/social_share_sb_qzone"
             android:layout_width="0.0dip"
             android:layout_height="wrap_content"
@@ -89,7 +89,7 @@
             app:description="@string/social_share_qzone"
             app:icons="@drawable/icon_qzone" />
 
-        <com.woodys.socialsdk.view.ShareButton
+        <com.woodys.socialsdk.view.ShareView
             android:id="@+id/social_share_sb_more"
             android:layout_width="0.0dip"
             android:layout_height="wrap_content"

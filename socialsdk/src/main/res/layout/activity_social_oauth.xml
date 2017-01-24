@@ -33,7 +33,7 @@
         android:paddingRight="25dp">
 
 
-        <com.woodys.socialsdk.view.ShareButton
+        <com.woodys.socialsdk.view.ShareView
             android:id="@+id/social_oauth_sb_weibo"
             android:layout_width="0.0dip"
             android:layout_height="wrap_content"
@@ -42,7 +42,7 @@
             app:description="@string/social_oauth_weibo"
             app:icons="@drawable/icon_weibo" />
 
-        <com.woodys.socialsdk.view.ShareButton
+        <com.woodys.socialsdk.view.ShareView
             android:id="@+id/social_oauth_sb_wechat"
             android:layout_width="0.0dip"
             android:layout_height="wrap_content"
@@ -51,7 +51,7 @@
             app:description="@string/social_oauth_weixin"
             app:icons="@drawable/icon_wechat" />
 
-        <com.woodys.socialsdk.view.ShareButton
+        <com.woodys.socialsdk.view.ShareView
             android:id="@+id/social_oauth_sb_qq"
             android:layout_width="0.0dip"
             android:layout_height="wrap_content"

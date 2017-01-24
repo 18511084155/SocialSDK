@@ -1,1 +1,1 @@
-include ':app',':sample-app', ':socialsdk'
+include ':sample-app', ':socialsdk'

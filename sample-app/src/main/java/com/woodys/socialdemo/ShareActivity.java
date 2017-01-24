@@ -1,4 +1,4 @@
-package com.encore.actionnow;
+package com.woodys.socialdemo;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,11 +9,12 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
+import com.woodys.socialdemo.R;
 import com.woodys.socialsdk.SocialSDK;
 import com.woodys.socialsdk.model.SocialShareScene;
 import com.woodys.socialsdk.otto.BusProvider;
 import com.woodys.socialsdk.otto.ShareBusEvent;
-import com.encore.actionnow.app.BaseActivity;
+import com.woodys.socialdemo.app.BaseActivity;
 import com.sina.weibo.sdk.api.share.BaseResponse;
 import com.sina.weibo.sdk.api.share.IWeiboHandler;
 import com.sina.weibo.sdk.constant.WBConstants;

@@ -15,24 +15,24 @@ import com.elbbbird.android.socialsdk.R;
 /**
  * Created by woodys on 2016/12/11.
  */
-public class ShareButton extends LinearLayout {
+public class ShareView extends LinearLayout {
 
     private ImageView a;
     private TextView b;
     private Drawable c;
     private String d;
 
-    public ShareButton(Context context) {
+    public ShareView(Context context) {
         this(context, null);
     }
 
-    public ShareButton(Context context, AttributeSet attrs) {
+    public ShareView(Context context, AttributeSet attrs) {
         this(context, attrs, 0);
     }
 
-    public ShareButton(Context context, AttributeSet attrs, int defStyleAttr) {
+    public ShareView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context,attrs);
-        TypedArray v1 = context.getTheme().obtainStyledAttributes(attrs, R.styleable.ShareButton, defStyleAttr, 0);
+        TypedArray v1 = context.getTheme().obtainStyledAttributes(attrs, R.styleable.ShareView, defStyleAttr, 0);
         this.d = v1.getString(0);
         this.c = v1.getDrawable(1);
         LayoutInflater v2 = LayoutInflater.from(context);

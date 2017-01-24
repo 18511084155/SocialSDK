@@ -1,4 +1,4 @@
-package com.encore.actionnow.app;
+package com.woodys.socialdemo.app;
 
 import android.app.Application;
 

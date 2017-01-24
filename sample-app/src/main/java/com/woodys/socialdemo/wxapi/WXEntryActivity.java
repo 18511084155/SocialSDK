@@ -1,4 +1,4 @@
-package com.encore.actionnow.wxapi;
+package com.woodys.socialdemo.wxapi;
 
 
 import com.woodys.socialsdk.sso.wechat.WXCallbackActivity;
