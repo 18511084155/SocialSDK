@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.view.Gravity;
 import android.view.View;
 
-import com.elbbbird.android.socialsdk.R;
+import com.woodys.socialsdk.R;
 import com.woodys.socialsdk.SocialSDK;
 import com.woodys.socialsdk.model.SocialInfo;
 import com.woodys.socialsdk.model.SocialShareScene;

@@ -10,7 +10,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.elbbbird.android.socialsdk.R;
+import com.woodys.socialsdk.R;
 
 /**
  * Created by woodys on 2016/12/11.

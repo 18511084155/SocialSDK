@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
 
-import com.elbbbird.android.socialsdk.R;
+import com.woodys.socialsdk.R;
 import com.woodys.socialsdk.SocialSDK;
 import com.woodys.socialsdk.model.SocialInfo;
 import com.woodys.socialsdk.model.SocialToken;

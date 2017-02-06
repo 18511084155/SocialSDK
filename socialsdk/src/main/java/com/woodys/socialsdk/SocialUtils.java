@@ -6,7 +6,7 @@ import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 
-import com.elbbbird.android.socialsdk.R;
+import com.woodys.socialsdk.R;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;

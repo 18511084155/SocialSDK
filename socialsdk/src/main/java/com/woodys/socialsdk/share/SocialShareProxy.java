@@ -44,7 +44,7 @@ public class SocialShareProxy {
         intent.setClass(context, SocialShareActivity.class);
         context.startActivity(intent);
 
-        ((Activity) context).overridePendingTransition(com.elbbbird.android.socialsdk.R.anim.snack_in, 0);
+        ((Activity) context).overridePendingTransition(com.woodys.socialsdk.R.anim.snack_in, 0);
     }
 
     private static IWXShareCallback wechatShareCallback = new IWXShareCallback() {
