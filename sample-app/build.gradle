@@ -1,15 +1,13 @@
 apply plugin: 'com.android.application'
-
 android {
     compileSdkVersion 23
     buildToolsVersion "23.0.3"
     defaultConfig {
-        applicationId "social.woodys.com.platformsdk"
+        applicationId "com.woodys.socialdemo"
         minSdkVersion 11
         targetSdkVersion 23
         versionCode 1
         versionName "1.0"
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
         release {
@@ -21,9 +19,11 @@ android {
 
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
-    testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:23.4.0'
     compile 'com.android.support:design:23.4.0'
     compile 'com.jakewharton:butterknife:7.0.1'
+    compile('com.facebook.fresco:fresco:0.8.1') {
+        exclude group: 'com.nineoldandroids', module: 'library'
+    }
     compile project(':socialsdk')
 }

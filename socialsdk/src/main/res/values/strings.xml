@@ -11,4 +11,10 @@
     <string name="social_share_qq">QQ好友</string>
     <string name="social_share_qzone">QQ空间</string>
     <string name="social_share_more">更多</string>
+
+    <string name="social_share_sdk_share_copy">复制成功</string>
+    <string name="social_share_sdk_progress_compress_image">正在处理图片...</string>
+    <string name="social_share_sdk_compress_image_failed">图片处理失败，请稍后重试</string>
+    <string name="social_share_sdk_not_install_wechat">(>_>)请先安装微信~</string>
+    <string name="social_share_sdk_not_install_qq">尚未安装QQ或当前QQ版本不支持分享~</string>
 </resources>

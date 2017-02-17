@@ -5,11 +5,8 @@ import android.content.Intent;
 import android.text.TextUtils;
 
 import com.woodys.socialsdk.model.SocialInfo;
-import com.woodys.socialsdk.model.SocialShareScene;
-import com.woodys.socialsdk.share.SocialShareProxy;
 import com.woodys.socialsdk.sso.SocialInfoKeeper;
 import com.woodys.socialsdk.sso.SocialSSOProxy;
-import com.sina.weibo.sdk.api.share.IWeiboHandler;
 
 /**
  * 社交SDK
@@ -203,7 +200,6 @@ public class SocialSDK {
      * @param context context
      */
     public static void revokeWeChat(Context context) {
-
         SocialSSOProxy.logoutWeChat(context);
     }
 
@@ -273,82 +269,4 @@ public class SocialSDK {
     public static void oauthQQCallback(int requestCode, int resultCode, Intent data) {
         SocialSSOProxy.loginQQCallback(requestCode, resultCode, data);
     }
-
-    /**
-     * 一键分享，默认UI
-     *
-     * @param context context
-     * @param scene   社会化分享数据
-     */
-    public static void shareTo(Context context, SocialShareScene scene) {
-        SocialShareProxy.share(context, info, scene);
-    }
-
-    /**
-     * 分享到微信
-     *
-     * @param context context
-     * @param appId   app id
-     * @param scene   社会化分享数据
-     */
-    public static void shareToWeChat(Context context, String appId, SocialShareScene scene) {
-        SocialShareProxy.shareToWeChat(context, appId, scene);
-    }
-
-    /**
-     * 分享到微信朋友圈
-     *
-     * @param context context
-     * @param scene   社会化分享数据
-     */
-    public static void shareToWeChatTimeline(Context context, String appId, SocialShareScene scene) {
-        SocialShareProxy.shareToWeChatTimeline(context, appId, scene);
-    }
-
-    /**
-     * 分享到微博
-     *
-     * @param context context
-     * @param appKey  appkey
-     * @param scene   社会化分享数据
-     */
-    public static void shareToWeibo(Context context, String appKey, SocialShareScene scene) {
-        SocialShareProxy.shareToWeibo(context, appKey, "", scene);
-    }
-
-    /**
-     * 分享到QQ
-     *
-     * @param context context
-     * @param scene   社会化分享数据
-     */
-    public static void shareToQQ(Context context, String appId, SocialShareScene scene) {
-        SocialShareProxy.shareToQQ(context, appId, scene);
-    }
-
-    /**
-     * 分享到QQ空间
-     *
-     * @param context context
-     * @param scene   社会化分享数据
-     */
-    public static void shareToQZone(Context context, String appId, SocialShareScene scene) {
-        SocialShareProxy.shareToQZone(context, appId, scene);
-    }
-
-    /**
-     * QQ分享回调
-     *
-     * @param requestCode request
-     * @param resultCode  result
-     * @param data        data
-     */
-    public static void shareToQCallback(int requestCode, int resultCode, Intent data) {
-        SocialShareProxy.shareToQCallback(requestCode, resultCode, data);
-    }
-
-    public static void shareToWeiboCallback(Intent intent, IWeiboHandler.Response response) {
-        SocialShareProxy.shareToWeiboCallback(intent, response);
-    }
-
 }

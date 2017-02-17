@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.woodys.socialdemo">
-
     <application
-        android:name="com.woodys.socialdemo.app.SocialSDKApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -14,14 +12,20 @@
         <activity
             android:name="com.woodys.socialdemo.SocialActivity"
             android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:launchMode="singleTop">
+            android:launchMode="singleTop"
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="com.woodys.socialdemo.ShareMainActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
 
         <!-- WeChat -->
         <activity
@@ -46,29 +50,7 @@
             </intent-filter>
         </activity>
 
-        <activity
-            android:name="com.woodys.socialdemo.ShareActivity"
-            android:label="@string/title_activity_share"
-            android:parentActivityName="com.woodys.socialdemo.SocialActivity"
-            android:theme="@style/AppTheme.NoActionBar">
-            <!-- 此处会与SDK内部定义冲突 -->
-            <!--<intent-filter>-->
-            <!--<action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY" />-->
-            <!--<category android:name="android.intent.category.DEFAULT" />-->
-            <!--</intent-filter>-->
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.woodys.socialdemo.com.woodys.socialdemo.SocialActivity" />
-        </activity>
-        <activity
-            android:name="com.woodys.socialdemo.ShareAllActivity"
-            android:label="@string/title_activity_share_all"
-            android:parentActivityName="com.woodys.socialdemo.SocialActivity"
-            android:theme="@style/AppTheme.NoActionBar">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.woodys.socialdemo.com.woodys.socialdemo.SocialActivity" />
-        </activity>
+
         <activity
             android:name="com.woodys.socialdemo.SsoActivity"
             android:label="@string/title_activity_sso"
@@ -76,7 +58,7 @@
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.woodys.socialdemo.com.woodys.socialdemo.SocialActivity" />
+                android:value="com.woodys.socialdemo.SocialActivity" />
         </activity>
         <activity
             android:name="com.woodys.socialdemo.SsoAllActivity"
@@ -85,7 +67,7 @@
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.woodys.socialdemo.com.woodys.socialdemo.SocialActivity" />
+                android:value="com.woodys.socialdemo.SocialActivity" />
         </activity>
     </application>
 

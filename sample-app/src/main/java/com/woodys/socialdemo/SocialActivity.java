@@ -7,8 +7,6 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
-
-import com.woodys.socialdemo.R;
 import com.woodys.socialdemo.app.BaseActivity;
 
 import butterknife.Bind;
@@ -19,14 +17,12 @@ public class SocialActivity extends BaseActivity {
 
     @Bind(R.id.main_btn_sso)
     Button btnSso;
-    @Bind(R.id.main_btn_share)
-    Button btnShare;
     @Bind(R.id.main_btn_share_all)
     Button btnShareAll;
     @Bind(R.id.main_btn_sso_all)
     Button btnSsoAll;
 
-    @OnClick({R.id.main_btn_share, R.id.main_btn_sso, R.id.main_btn_share_all, R.id.main_btn_sso_all})
+    @OnClick({R.id.main_btn_sso, R.id.main_btn_share_all, R.id.main_btn_sso_all})
     public void startActivity(View view) {
 
         Intent intent = new Intent();
@@ -35,12 +31,8 @@ public class SocialActivity extends BaseActivity {
                 intent.setClass(SocialActivity.this, SsoActivity.class);
                 break;
 
-            case R.id.main_btn_share:
-                intent.setClass(SocialActivity.this, ShareActivity.class);
-                break;
-
             case R.id.main_btn_share_all:
-                intent.setClass(SocialActivity.this, ShareAllActivity.class);
+                intent.setClass(SocialActivity.this, ShareMainActivity.class);
                 break;
 
             case R.id.main_btn_sso_all:

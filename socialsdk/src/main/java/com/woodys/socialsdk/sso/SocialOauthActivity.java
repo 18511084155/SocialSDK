@@ -8,7 +8,7 @@ import android.view.View;
 import com.woodys.socialsdk.R;
 import com.woodys.socialsdk.SocialSDK;
 import com.woodys.socialsdk.model.SocialInfo;
-import com.woodys.socialsdk.view.ShareView;
+import com.woodys.socialsdk.share.view.ShareView;
 import com.tencent.connect.common.Constants;
 
 /**

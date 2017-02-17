@@ -1,8 +1,15 @@
+
+
 package com.woodys.socialdemo.wxapi;
 
+import com.woodys.socialdemo.helper.ConfigHelper;
+import com.woodys.socialsdk.share.core.ui.BaseWXEntryActivity;
 
-import com.woodys.socialsdk.sso.wechat.WXCallbackActivity;
+public class WXEntryActivity extends BaseWXEntryActivity {
 
-public class WXEntryActivity extends WXCallbackActivity {
+    @Override
+    protected String getAppId() {
+        return ConfigHelper.WECHAT_APPID;
+    }
 
 }

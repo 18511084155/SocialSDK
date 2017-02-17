@@ -83,7 +83,7 @@ public class SocialSSOProxy {
                 if (DEBUG)
                     Log.i(TAG, "SocialSSOProxy.loginWeibo#login onComplete");
                 final String token = bundle.getString("access_token");
-                final String expiresIn = bundle.getString("expires_in", "0");
+                final String expiresIn =(bundle.getString("expires_in") == null) ? "0" : bundle.getString("expires_in");
                 final String code = bundle.getString("code");
                 final String openId = bundle.getString("uid");
                 final SocialToken socialToken = new SocialToken(openId, token, "", Long.valueOf(expiresIn));

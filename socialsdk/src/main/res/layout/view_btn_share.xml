@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <com.woodys.socialsdk.view.OverlayImageView
+    <com.woodys.socialsdk.share.view.OverlayImageView
         android:id="@+id/view_btn_share_iv"
         android:layout_width="60.0dip"
         android:layout_height="60.0dip"
