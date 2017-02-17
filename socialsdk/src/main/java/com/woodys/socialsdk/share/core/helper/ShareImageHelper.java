@@ -22,7 +22,6 @@ import android.graphics.BitmapFactory;
 import android.text.TextUtils;
 import android.widget.Toast;
 
-
 import com.woodys.socialsdk.R;
 import com.woodys.socialsdk.share.core.SocialShareConfiguration;
 import com.woodys.socialsdk.share.core.error.ShareException;

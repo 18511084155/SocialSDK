@@ -20,8 +20,8 @@ import android.app.Activity;
 import android.content.Intent;
 import android.widget.Toast;
 
-import com.woodys.socialsdk.share.core.error.SocialShareStatusCode;
 import com.woodys.socialsdk.share.core.error.ShareException;
+import com.woodys.socialsdk.share.core.error.SocialShareStatusCode;
 import com.woodys.socialsdk.share.core.handler.IShareHandler;
 import com.woodys.socialsdk.share.core.handler.ShareHandlerPool;
 import com.woodys.socialsdk.share.core.shareparam.BaseShareParam;

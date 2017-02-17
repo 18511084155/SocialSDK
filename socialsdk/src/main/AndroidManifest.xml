@@ -32,16 +32,9 @@
 
 
         <activity
-            android:name="com.woodys.socialsdk.sso.SocialOauthActivity"
-            android:configChanges="orientation|keyboardHidden|screenSize"
-            android:launchMode="singleTop"
-            android:theme="@style/SocialOauthActivity" />
-
-        <activity
             android:name="com.woodys.socialsdk.share.core.ui.SinaAssistActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
-            android:launchMode="singleTop"
-            android:theme="@style/SocialShareActivity">
+            android:theme="@android:style/Theme.Translucent.NoTitleBar">
             <intent-filter>
                 <action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY" />
                 <category android:name="android.intent.category.DEFAULT" />

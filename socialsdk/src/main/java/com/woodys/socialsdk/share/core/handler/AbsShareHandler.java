@@ -21,13 +21,13 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 
+import com.tencent.open.utils.ThreadManager;
 import com.woodys.socialsdk.share.core.SocialShareConfiguration;
 import com.woodys.socialsdk.share.core.SocializeListeners;
-import com.woodys.socialsdk.share.core.error.SocialShareStatusCode;
 import com.woodys.socialsdk.share.core.error.ShareException;
+import com.woodys.socialsdk.share.core.error.SocialShareStatusCode;
 import com.woodys.socialsdk.share.core.helper.ShareImageHelper;
 import com.woodys.socialsdk.share.core.shareparam.BaseShareParam;
-import com.tencent.open.utils.ThreadManager;
 
 /**
  * @author woodys

@@ -21,6 +21,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 
+import com.tencent.connect.common.Constants;
+import com.tencent.connect.share.QQShare;
+import com.tencent.tauth.IUiListener;
+import com.tencent.tauth.Tencent;
 import com.woodys.socialsdk.share.core.SocialShareConfiguration;
 import com.woodys.socialsdk.share.core.SocializeListeners;
 import com.woodys.socialsdk.share.core.SocializeMedia;
@@ -33,10 +37,6 @@ import com.woodys.socialsdk.share.core.shareparam.ShareParamImage;
 import com.woodys.socialsdk.share.core.shareparam.ShareParamText;
 import com.woodys.socialsdk.share.core.shareparam.ShareParamVideo;
 import com.woodys.socialsdk.share.core.shareparam.ShareParamWebPage;
-import com.tencent.connect.common.Constants;
-import com.tencent.connect.share.QQShare;
-import com.tencent.tauth.IUiListener;
-import com.tencent.tauth.Tencent;
 
 /**
  * @author woodys

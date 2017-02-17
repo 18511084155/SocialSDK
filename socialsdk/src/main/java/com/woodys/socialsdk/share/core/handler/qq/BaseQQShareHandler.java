@@ -21,20 +21,22 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.widget.Toast;
 
-import com.woodys.socialsdk.R;;
-import com.woodys.socialsdk.share.core.SocialShareConfiguration;
-import com.woodys.socialsdk.share.core.SharePlatformConfig;
-import com.woodys.socialsdk.share.core.SocializeMedia;
-import com.woodys.socialsdk.share.core.error.SocialShareStatusCode;
-import com.woodys.socialsdk.share.core.error.ShareConfigException;
-import com.woodys.socialsdk.share.core.error.ShareException;
-import com.woodys.socialsdk.share.core.handler.BaseShareHandler;
 import com.tencent.open.utils.Util;
 import com.tencent.tauth.IUiListener;
 import com.tencent.tauth.Tencent;
 import com.tencent.tauth.UiError;
+import com.woodys.socialsdk.R;
+import com.woodys.socialsdk.share.core.SharePlatformConfig;
+import com.woodys.socialsdk.share.core.SocialShareConfiguration;
+import com.woodys.socialsdk.share.core.SocializeMedia;
+import com.woodys.socialsdk.share.core.error.ShareConfigException;
+import com.woodys.socialsdk.share.core.error.ShareException;
+import com.woodys.socialsdk.share.core.error.SocialShareStatusCode;
+import com.woodys.socialsdk.share.core.handler.BaseShareHandler;
 
 import java.util.Map;
+
+;
 
 /**
  * @author woodys

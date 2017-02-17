@@ -21,18 +21,18 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 
-import com.woodys.socialsdk.share.core.SocialShare;
-import com.woodys.socialsdk.share.core.SocialShareConfiguration;
-import com.woodys.socialsdk.share.core.SharePlatformConfig;
-import com.woodys.socialsdk.share.core.SocializeListeners;
-import com.woodys.socialsdk.share.core.SocializeMedia;
-import com.woodys.socialsdk.share.core.error.SocialShareStatusCode;
-import com.woodys.socialsdk.share.core.error.ShareException;
-import com.woodys.socialsdk.share.core.handler.sina.SinaShareHandler;
-import com.woodys.socialsdk.share.core.shareparam.BaseShareParam;
-import com.woodys.socialsdk.SocialPlatformConfigHelper;
 import com.sina.weibo.sdk.api.share.BaseResponse;
 import com.sina.weibo.sdk.api.share.IWeiboHandler;
+import com.woodys.socialsdk.SocialPlatformConfigHelper;
+import com.woodys.socialsdk.share.core.SharePlatformConfig;
+import com.woodys.socialsdk.share.core.SocialShare;
+import com.woodys.socialsdk.share.core.SocialShareConfiguration;
+import com.woodys.socialsdk.share.core.SocializeListeners;
+import com.woodys.socialsdk.share.core.SocializeMedia;
+import com.woodys.socialsdk.share.core.error.ShareException;
+import com.woodys.socialsdk.share.core.error.SocialShareStatusCode;
+import com.woodys.socialsdk.share.core.handler.sina.SinaShareHandler;
+import com.woodys.socialsdk.share.core.shareparam.BaseShareParam;
 
 import java.util.Map;
 

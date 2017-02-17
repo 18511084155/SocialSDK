@@ -144,7 +144,7 @@ public class SocialShareConfiguration implements Parcelable {
             }
 
             if (mDefaultShareImage == -1) {
-                mDefaultShareImage = R.drawable.default_share_image;
+                mDefaultShareImage = R.drawable.icon_default;
             }
 
             if (TextUtils.isEmpty(mSinaRedirectUrl)) {

@@ -1,15 +1,15 @@
-package com.woodys.socialsdk.sso;
+package com.woodys.socialdemo;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-import com.woodys.socialsdk.R;
+import com.tencent.connect.common.Constants;
 import com.woodys.socialsdk.SocialSDK;
 import com.woodys.socialsdk.model.SocialInfo;
 import com.woodys.socialsdk.share.view.ShareView;
-import com.tencent.connect.common.Constants;
+import com.woodys.socialsdk.sso.SocialSSOProxy;
 
 /**
  * 社交授权activity

@@ -5,4 +5,5 @@
     <color name="colorAccent">#FF4081</color>
     <color name="socialize_gray_trans">#44999999</color>
     <color name="socialize_black_trans">#66000000</color>
+    <color name="dark_gray">#FF303030</color>
 </resources>

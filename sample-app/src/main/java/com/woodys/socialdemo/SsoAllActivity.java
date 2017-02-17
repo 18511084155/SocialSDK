@@ -34,7 +34,7 @@ public class SsoAllActivity extends BaseActivity {
     public void login(View view) {
         SocialSDK.setDebugMode(true);
         SocialSDK.init("wx3ecc7ffe590fd845", "1b3f07fa99d82232d360c359f6504980", "1633462674", "1104664609");
-        SocialSDK.oauth(SsoAllActivity.this);
+        SocialSDK.oauth(SsoAllActivity.this,SocialOauthActivity.class);
     }
 
     @OnClick(R.id.sso_all_btn_logout_all)

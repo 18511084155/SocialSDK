@@ -356,14 +356,14 @@ public class SocialSSOProxy {
         Tencent.onActivityResultData(requestCode, resultCode, data, qqLoginListener);
     }
 
-    public static void login(Context context, SocialInfo info) {
+    public static void login(Context context, SocialInfo info,Class<Activity> activityClass) {
         if (DEBUG)
             Log.i(TAG, "SocialSSOProxy.login");
         Intent intent = new Intent();
         Bundle bundle = new Bundle();
         bundle.putSerializable("info", info);
         intent.putExtras(bundle);
-        intent.setClass(context, SocialOauthActivity.class);
+        intent.setClass(context, activityClass);
         context.startActivity(intent);
         ((Activity) context).overridePendingTransition(R.anim.snack_in, 0);
     }

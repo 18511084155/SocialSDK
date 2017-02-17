@@ -25,23 +25,6 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.widget.Toast;
 
-import com.woodys.socialsdk.R;;
-import com.woodys.socialsdk.share.core.SocialShareConfiguration;
-import com.woodys.socialsdk.share.core.SharePlatformConfig;
-import com.woodys.socialsdk.share.core.SocializeListeners;
-import com.woodys.socialsdk.share.core.SocializeMedia;
-import com.woodys.socialsdk.share.core.error.SocialShareStatusCode;
-import com.woodys.socialsdk.share.core.error.InvalidParamException;
-import com.woodys.socialsdk.share.core.error.ShareConfigException;
-import com.woodys.socialsdk.share.core.error.ShareException;
-import com.woodys.socialsdk.share.core.handler.BaseShareHandler;
-import com.woodys.socialsdk.share.core.shareparam.ShareImage;
-import com.woodys.socialsdk.share.core.shareparam.ShareParamAudio;
-import com.woodys.socialsdk.share.core.shareparam.ShareParamImage;
-import com.woodys.socialsdk.share.core.shareparam.ShareParamText;
-import com.woodys.socialsdk.share.core.shareparam.ShareParamVideo;
-import com.woodys.socialsdk.share.core.shareparam.ShareParamWebPage;
-import com.woodys.socialsdk.share.core.shareparam.ShareVideo;
 import com.tencent.mm.sdk.modelbase.BaseReq;
 import com.tencent.mm.sdk.modelbase.BaseResp;
 import com.tencent.mm.sdk.modelmsg.SendMessageToWX;
@@ -53,8 +36,27 @@ import com.tencent.mm.sdk.modelmsg.WXVideoObject;
 import com.tencent.mm.sdk.modelmsg.WXWebpageObject;
 import com.tencent.mm.sdk.openapi.IWXAPI;
 import com.tencent.mm.sdk.openapi.WXAPIFactory;
+import com.woodys.socialsdk.R;
+import com.woodys.socialsdk.share.core.SharePlatformConfig;
+import com.woodys.socialsdk.share.core.SocialShareConfiguration;
+import com.woodys.socialsdk.share.core.SocializeListeners;
+import com.woodys.socialsdk.share.core.SocializeMedia;
+import com.woodys.socialsdk.share.core.error.InvalidParamException;
+import com.woodys.socialsdk.share.core.error.ShareConfigException;
+import com.woodys.socialsdk.share.core.error.ShareException;
+import com.woodys.socialsdk.share.core.error.SocialShareStatusCode;
+import com.woodys.socialsdk.share.core.handler.BaseShareHandler;
+import com.woodys.socialsdk.share.core.shareparam.ShareImage;
+import com.woodys.socialsdk.share.core.shareparam.ShareParamAudio;
+import com.woodys.socialsdk.share.core.shareparam.ShareParamImage;
+import com.woodys.socialsdk.share.core.shareparam.ShareParamText;
+import com.woodys.socialsdk.share.core.shareparam.ShareParamVideo;
+import com.woodys.socialsdk.share.core.shareparam.ShareParamWebPage;
+import com.woodys.socialsdk.share.core.shareparam.ShareVideo;
 
 import java.util.Map;
+
+;
 
 /**
  * @author woodys

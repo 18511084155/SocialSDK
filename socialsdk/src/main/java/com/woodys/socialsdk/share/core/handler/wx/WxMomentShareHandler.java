@@ -18,12 +18,12 @@ package com.woodys.socialsdk.share.core.handler.wx;
 
 import android.app.Activity;
 
+import com.tencent.mm.sdk.modelmsg.SendMessageToWX;
 import com.woodys.socialsdk.share.core.SocialShareConfiguration;
 import com.woodys.socialsdk.share.core.SocializeMedia;
 import com.woodys.socialsdk.share.core.error.ShareException;
 import com.woodys.socialsdk.share.core.shareparam.ShareParamImage;
 import com.woodys.socialsdk.share.core.shareparam.ShareParamWebPage;
-import com.tencent.mm.sdk.modelmsg.SendMessageToWX;
 
 /**
  * @author woodys

@@ -1,5 +1,6 @@
 package com.woodys.socialsdk;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.text.TextUtils;
@@ -161,13 +162,13 @@ public class SocialSDK {
      *
      * @param context context
      */
-    public static void oauth(Context context) {
+    public static void oauth(Context context,Class activityClass) {
         if (!TextUtils.isEmpty(info.getWechatAppId())
                 && !TextUtils.isEmpty(info.getWeChatAppSecret())
                 && !TextUtils.isEmpty(info.getWeiboAppKey())
                 && !TextUtils.isEmpty(info.getQqAppId())) {
             SocialInfoKeeper.writeSocialInfo(context, info);
-            SocialSSOProxy.login(context, info);
+            SocialSSOProxy.login(context,info,activityClass);
         }
     }
 

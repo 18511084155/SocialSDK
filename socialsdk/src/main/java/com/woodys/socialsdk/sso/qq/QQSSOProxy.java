@@ -3,12 +3,12 @@ package com.woodys.socialsdk.sso.qq;
 import android.app.Activity;
 import android.content.Context;
 
-import com.woodys.socialsdk.model.SocialToken;
-import com.woodys.socialsdk.sso.SocialSSOProxy;
 import com.tencent.connect.UserInfo;
 import com.tencent.connect.auth.QQToken;
 import com.tencent.tauth.IUiListener;
 import com.tencent.tauth.Tencent;
+import com.woodys.socialsdk.model.SocialToken;
+import com.woodys.socialsdk.sso.SocialSSOProxy;
 
 /**
  * QQ授权proxy

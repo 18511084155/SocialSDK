@@ -20,8 +20,8 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 
-import com.woodys.socialsdk.share.core.SocialShareConfiguration;
 import com.woodys.socialsdk.share.core.SharePlatformConfig;
+import com.woodys.socialsdk.share.core.SocialShareConfiguration;
 import com.woodys.socialsdk.share.core.SocializeListeners;
 import com.woodys.socialsdk.share.core.SocializeMedia;
 import com.woodys.socialsdk.share.core.error.SocialShareStatusCode;

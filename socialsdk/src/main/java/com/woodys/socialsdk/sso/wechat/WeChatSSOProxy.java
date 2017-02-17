@@ -2,13 +2,13 @@ package com.woodys.socialsdk.sso.wechat;
 
 import android.content.Context;
 
+import com.tencent.mm.sdk.modelbase.BaseResp;
+import com.tencent.mm.sdk.modelmsg.SendAuth;
 import com.woodys.socialsdk.WeChat;
 import com.woodys.socialsdk.model.SocialInfo;
 import com.woodys.socialsdk.model.SocialToken;
 import com.woodys.socialsdk.model.SocialUser;
 import com.woodys.socialsdk.sso.SocialSSOProxy;
-import com.tencent.mm.sdk.modelbase.BaseResp;
-import com.tencent.mm.sdk.modelmsg.SendAuth;
 
 import org.json.JSONException;
 import org.json.JSONObject;
