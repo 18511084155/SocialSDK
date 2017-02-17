@@ -4,7 +4,7 @@ package com.woodys.socialdemo;
 
 import android.content.Intent;
 import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
+import android.support.v4.app.FragmentActivity;
 import android.view.View;
 import android.widget.Toast;
 
@@ -18,7 +18,7 @@ import com.woodys.socialsdk.share.core.error.SocialShareStatusCode;
  *
  * @author yrom
  */
-public abstract class BaseShareableActivity extends AppCompatActivity implements ShareHelper.Callback {
+public abstract class BaseShareableActivity extends FragmentActivity implements ShareHelper.Callback {
     protected ShareHelper mShare;
 
     public void startShare(@Nullable View anchor) {

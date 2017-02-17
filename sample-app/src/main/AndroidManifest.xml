@@ -20,12 +20,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity
             android:name="com.woodys.socialdemo.ShareMainActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:exported="true"
-            android:screenOrientation="portrait"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+            android:screenOrientation="portrait" />
 
         <!-- WeChat -->
         <activity
@@ -60,6 +60,7 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.woodys.socialdemo.SocialActivity" />
         </activity>
+
         <activity
             android:name="com.woodys.socialdemo.SsoAllActivity"
             android:label="@string/title_activity_sso_all"
