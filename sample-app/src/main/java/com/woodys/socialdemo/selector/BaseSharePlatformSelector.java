@@ -18,6 +18,7 @@ package com.woodys.socialdemo.selector;
 
 import android.content.Context;
 import android.support.v4.app.FragmentActivity;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -52,6 +53,12 @@ public abstract class BaseSharePlatformSelector {
             new ShareTarget(SocializeMedia.COPY, R.string.socialize_text_copy_url, R.drawable.socialize_copy_url)
     };
 
+    private static ShareTarget[] shareTargets1 = {
+            new ShareTarget(SocializeMedia.WEIXIN, R.string.socialize_text_weixin_key, R.drawable.socialize_wechat),
+            new ShareTarget(SocializeMedia.WEIXIN_MONMENT, R.string.socialize_text_weixin_circle_key, R.drawable.socialize_wxcircle),
+            new ShareTarget(SocializeMedia.COPY, R.string.socialize_text_copy_url, R.drawable.socialize_copy_url)
+    };
+
     public BaseSharePlatformSelector(FragmentActivity context, OnShareSelectorDismissListener dismissListener, AdapterView.OnItemClickListener itemClickListener) {
         mContext = context;
         mDismissListener = dismissListener;
@@ -69,13 +76,17 @@ public abstract class BaseSharePlatformSelector {
     }
 
     protected static GridView createShareGridView(final Context context, AdapterView.OnItemClickListener onItemClickListener) {
-        GridView grid = new GridView(context);
+        return createShareGridView(context,shareTargets1,onItemClickListener);
+    }
+
+    protected static GridView createShareGridView(final Context context,ShareTarget[] shareTargets,AdapterView.OnItemClickListener onItemClickListener) {
+        GridView gridView = new GridView(context);
         ListAdapter adapter = new ArrayAdapter<ShareTarget>(context, 0, shareTargets) {
             // no need scroll
             @Override
             public View getView(int position, View convertView, ViewGroup parent) {
                 View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.socialize_shareboard_item, parent, false);
-                view.setBackgroundDrawable(null);
+                view.setBackground(null);
                 ImageView image = (ImageView) view.findViewById(R.id.socialize_shareboard_image);
                 TextView platform = (TextView) view.findViewById(R.id.socialize_shareboard_pltform_name);
 
@@ -85,14 +96,17 @@ public abstract class BaseSharePlatformSelector {
                 return view;
             }
         };
-        grid.setNumColumns(-1);
-        grid.setStretchMode(GridView.STRETCH_COLUMN_WIDTH);
-        grid.setColumnWidth(context.getResources().getDimensionPixelSize(R.dimen.socialize_shareboard_size));
-        grid.setLayoutParams(new ViewGroup.LayoutParams(-1, -2));
-        grid.setSelector(R.drawable.socialize_selector_item_background);
-        grid.setAdapter(adapter);
-        grid.setOnItemClickListener(onItemClickListener);
-        return grid;
+        gridView.setNumColumns(GridView.AUTO_FIT);
+        gridView.setStretchMode(GridView.STRETCH_COLUMN_WIDTH);
+        gridView.setColumnWidth(context.getResources().getDimensionPixelSize(R.dimen.socialize_shareboard_size));
+        gridView.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,ViewGroup.LayoutParams.WRAP_CONTENT));
+        gridView.setSelector(R.drawable.socialize_selector_item_background);
+        gridView.setGravity(Gravity.CENTER);
+        gridView.setHorizontalSpacing(context.getResources().getDimensionPixelSize(R.dimen.socialize_horizontal_gridView));
+        gridView.setVerticalSpacing(context.getResources().getDimensionPixelSize(R.dimen.socialize_vertical_gridView));
+        gridView.setAdapter(adapter);
+        gridView.setOnItemClickListener(onItemClickListener);
+        return gridView;
     }
 
     public FragmentActivity getContext() {

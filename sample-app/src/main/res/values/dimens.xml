@@ -4,4 +4,6 @@
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
     <dimen name="socialize_shareboard_size">80dp</dimen>
+    <dimen name="socialize_horizontal_gridView">10dp</dimen>
+    <dimen name="socialize_vertical_gridView">10dp</dimen>
 </resources>

@@ -19,6 +19,7 @@ package com.woodys.socialdemo.selector;
 import android.content.Context;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
+import android.graphics.drawable.GradientDrawable;
 import android.support.v4.app.FragmentActivity;
 import android.view.Gravity;
 import android.view.View;
@@ -38,13 +39,13 @@ import com.woodys.socialdemo.R;
  *
  * @since 2016/1/4.
  */
-public class PopFullScreenSharePlatformSelector extends BaseSharePlatformSelector implements View.OnClickListener {
+public class PopFullScreenSharePlatformSelector extends BaseSharePlatformSelector {
 
     protected PopupWindow mShareWindow;
     protected View mAnchorView;
-    protected RelativeLayout mContainerView;
+    protected View view;
 
-    private GridView grid;
+    private GridView gridView;
     private Animation enterAnimation;
 
     public PopFullScreenSharePlatformSelector(FragmentActivity context, View anchorView, OnShareSelectorDismissListener dismissListener, AdapterView.OnItemClickListener itemClickListener) {
@@ -64,7 +65,7 @@ public class PopFullScreenSharePlatformSelector extends BaseSharePlatformSelecto
     private void showEnterAnimation() {
         if (enterAnimation == null)
             enterAnimation = AnimationUtils.loadAnimation(getContext(), R.anim.socialize_shareboard_animation_in);
-        grid.setAnimation(enterAnimation);
+        view.setAnimation(enterAnimation);
         enterAnimation.start();
     }
 
@@ -81,7 +82,7 @@ public class PopFullScreenSharePlatformSelector extends BaseSharePlatformSelecto
         super.release();
         mAnchorView = null;
         mShareWindow = null;
-        grid = null;
+        gridView = null;
         enterAnimation = null;
     }
 
@@ -91,20 +92,22 @@ public class PopFullScreenSharePlatformSelector extends BaseSharePlatformSelecto
 
         Context context = getContext();
 
-        grid = createShareGridView(context, getItemClickListener());
+        gridView = createShareGridView(context, getItemClickListener());
         RelativeLayout.LayoutParams gridParams = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.MATCH_PARENT, RelativeLayout.LayoutParams.WRAP_CONTENT);
-        gridParams.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM);
-        grid.setLayoutParams(gridParams);
+        gridView.setLayoutParams(gridParams);
 
-        mContainerView = new RelativeLayout(getContext());
-        mContainerView.setBackgroundColor(getContext().getResources().getColor(R.color.socialize_black_trans));
-        RelativeLayout.LayoutParams containerParams = new RelativeLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT);
-        mContainerView.setLayoutParams(containerParams);
-        mContainerView.addView(grid);
-        mContainerView.setOnClickListener(this);
+        view = View.inflate(context,R.layout.view_share_item,null);
+        view.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {dismiss();}
+        });
+        ((LinearLayout) view.findViewById(R.id.ll_container_view)).addView(gridView);
+        view.findViewById(R.id.iv_share_close).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {dismiss();}
+        });
 
-        mShareWindow = new PopupWindow(mContainerView, WindowManager.LayoutParams.MATCH_PARENT, WindowManager.LayoutParams.MATCH_PARENT, true);
-        grid.setBackgroundDrawable(new ColorDrawable(Color.WHITE));
+        mShareWindow = new PopupWindow(view, WindowManager.LayoutParams.MATCH_PARENT, WindowManager.LayoutParams.MATCH_PARENT, true);
         mShareWindow.setOutsideTouchable(true);
         mShareWindow.setAnimationStyle(-1);
         mShareWindow.setOnDismissListener(new PopupWindow.OnDismissListener() {
@@ -114,12 +117,5 @@ public class PopFullScreenSharePlatformSelector extends BaseSharePlatformSelecto
                     getDismissListener().onDismiss();
             }
         });
-    }
-
-    @Override
-    public void onClick(View v) {
-        if (v == mContainerView) {
-            dismiss();
-        }
     }
 }
