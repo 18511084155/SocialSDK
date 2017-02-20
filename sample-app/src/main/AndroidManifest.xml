@@ -36,7 +36,7 @@
 
         <!-- WeChat -->
         <activity
-            android:name="com.woodys.socialdemo.wxapi.WXEntryActivity"
+            android:name="com.woodys.socialdemo.wxapi.WXSocialEntryActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:exported="true"
             android:screenOrientation="portrait"

@@ -23,11 +23,10 @@ import com.woodys.socialsdk.share.core.shareparam.BaseShareParam;
 /**
  * Helper
  *
- * @author yrom & woodys.
+ * @author woodys.
  */
 public final class ShareHelper {
 
-    static final String APP_URL = "http://app.SocialSocial.com";
     private FragmentActivity mContext;
     private Callback mCallback;
     private BaseSharePlatformSelector mPlatformSelector;
