@@ -12,21 +12,21 @@
         android:layout_marginLeft="12dp"
         android:layout_marginRight="12dp"
         android:layout_marginBottom="16dp"
+        android:paddingBottom="10dp"
         android:layout_alignParentBottom="true"
         android:background="@drawable/gray_stroke_shape">
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center">
+            android:paddingTop="10dp">
 
             <TextView
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:paddingTop="14dp"
-                android:paddingBottom="14dp"
                 android:text="@string/share"
                 android:textSize="15sp"
+                android:layout_centerInParent="true"
                 android:gravity="center"
                 android:textColor="@color/text_color"/>
 
