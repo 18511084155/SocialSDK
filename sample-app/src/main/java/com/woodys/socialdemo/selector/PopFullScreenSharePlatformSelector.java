@@ -62,6 +62,11 @@ public class PopFullScreenSharePlatformSelector extends BaseSharePlatformSelecto
         showEnterAnimation();
     }
 
+    @Override
+    public boolean isShow() {
+        return (null!=mShareWindow && mShareWindow.isShowing());
+    }
+
     private void showEnterAnimation() {
         if (enterAnimation == null)
             enterAnimation = AnimationUtils.loadAnimation(getContext(), R.anim.socialize_shareboard_animation_in);

@@ -67,6 +67,11 @@ public class DialogSharePlatformSelector extends BaseSharePlatformSelector {
     }
 
     @Override
+    public boolean isShow() {
+        return null!=mShareDialog && mShareDialog.isShow();
+    }
+
+    @Override
     public void dismiss() {
         if (mShareDialog != null)
             mShareDialog.dismissAllowingStateLoss();
@@ -87,18 +92,22 @@ public class DialogSharePlatformSelector extends BaseSharePlatformSelector {
 
         @Override
         public void show(FragmentManager manager, String tag) {
+            if(isShow()){return;}
+            super.show(manager, tag);
+        }
+
+        public boolean isShow(){
+            Boolean show = null;
             try {
                 Field field = DialogFragment.class.getDeclaredField("mShownByMe");
                 if (field != null) {
                     field.setAccessible(true);
-                    Boolean show = field.getBoolean(this);
-                    if (show != null && show) {
-                        return;
-                    }
+                    show = field.getBoolean(this);
                 }
-            } catch (Exception ignored) {
+            } catch (Exception e) {
+                e.printStackTrace();
             }
-            super.show(manager, tag);
+            return (show != null && show);
         }
 
         @Override

@@ -67,6 +67,8 @@ public abstract class BaseSharePlatformSelector {
 
     public abstract void show();
 
+    public abstract boolean isShow();
+
     public abstract void dismiss();
 
     public void release() {

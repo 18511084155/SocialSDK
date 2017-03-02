@@ -52,6 +52,11 @@ public class PopWrapSharePlatformSelector extends BaseSharePlatformSelector {
     }
 
     @Override
+    public boolean isShow() {
+        return (null!=mShareWindow && mShareWindow.isShowing());
+    }
+
+    @Override
     public void dismiss() {
         if (mShareWindow != null) {
             mShareWindow.dismiss();
