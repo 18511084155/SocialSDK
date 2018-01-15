@@ -32,10 +32,7 @@ public abstract class BaseShareableActivity extends FragmentActivity implements 
         if (anchor == null) {
             mShare.showShareDialog();
         } else {
-            if (isWindowFullScreen)
-                mShare.showShareFullScreenWindow(anchor);
-            else
-                mShare.showShareWarpWindow(anchor);
+            if (isWindowFullScreen) mShare.showShareFullScreenWindow(anchor);
         }
     }
 

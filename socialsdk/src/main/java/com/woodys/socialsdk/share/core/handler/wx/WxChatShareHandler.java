@@ -18,7 +18,7 @@ package com.woodys.socialsdk.share.core.handler.wx;
 
 import android.app.Activity;
 
-import com.tencent.mm.sdk.modelmsg.SendMessageToWX;
+import com.tencent.mm.opensdk.modelmsg.SendMessageToWX;
 import com.woodys.socialsdk.share.core.SocialShareConfiguration;
 import com.woodys.socialsdk.share.core.SocializeMedia;
 

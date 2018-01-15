@@ -17,9 +17,6 @@
 package com.woodys.socialdemo.selector;
 
 import android.content.Context;
-import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
-import android.graphics.drawable.GradientDrawable;
 import android.support.v4.app.FragmentActivity;
 import android.view.Gravity;
 import android.view.View;
@@ -33,6 +30,7 @@ import android.widget.PopupWindow;
 import android.widget.RelativeLayout;
 
 import com.woodys.socialdemo.R;
+
 
 /**
  * @author woodys

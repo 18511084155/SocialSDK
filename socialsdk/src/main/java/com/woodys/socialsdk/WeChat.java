@@ -2,8 +2,9 @@ package com.woodys.socialsdk;
 
 import android.content.Context;
 
-import com.tencent.mm.sdk.openapi.IWXAPI;
-import com.tencent.mm.sdk.openapi.WXAPIFactory;
+import com.tencent.mm.opensdk.openapi.IWXAPI;
+import com.tencent.mm.opensdk.openapi.WXAPIFactory;
+
 
 /**
  * 之所以抽取WeChat类，是因为IWXAPI需要在SSO授权和分享同时用到

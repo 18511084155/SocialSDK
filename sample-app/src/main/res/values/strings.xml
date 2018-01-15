@@ -20,6 +20,7 @@
     <string name="socialize_text_weixin_circle_key">朋友圈</string>
     <string name="socialize_text_qq_key">QQ</string>
     <string name="socialize_text_qq_zone_key">QQ空间</string>
+    <string name="socialize_text_sms">短信</string>
     <string name="socialize_text_copy_url">复制链接</string>
 
     <string name="share">分享</string>

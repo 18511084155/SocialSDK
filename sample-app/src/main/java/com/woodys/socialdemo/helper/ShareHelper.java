@@ -13,7 +13,6 @@ import android.widget.AdapterView;
 import com.woodys.socialdemo.selector.BaseSharePlatformSelector;
 import com.woodys.socialdemo.selector.DialogSharePlatformSelector;
 import com.woodys.socialdemo.selector.PopFullScreenSharePlatformSelector;
-import com.woodys.socialdemo.selector.PopWrapSharePlatformSelector;
 import com.woodys.socialsdk.share.core.SocialShare;
 import com.woodys.socialsdk.share.core.SocialShareConfiguration;
 import com.woodys.socialsdk.share.core.SocializeListeners;
@@ -59,33 +58,28 @@ public final class ShareHelper {
     }
 
     public void showShareDialog() {
-        mPlatformSelector = new DialogSharePlatformSelector(mContext, new BaseSharePlatformSelector.OnShareSelectorDismissListener() {
-            @Override
-            public void onDismiss() {
-                onShareSelectorDismiss();
-            }
-        }, mShareItemClick);
-        mPlatformSelector.show();
+        if(mPlatformSelector==null || null!=mPlatformSelector && !mPlatformSelector.isShow()) {
+            mPlatformSelector = new DialogSharePlatformSelector(mContext, new BaseSharePlatformSelector.OnShareSelectorDismissListener() {
+                @Override
+                public void onDismiss() {
+                    onShareSelectorDismiss();
+                }
+            }, mShareItemClick);
+            mPlatformSelector.show();
+        }
     }
 
-    public void showShareWarpWindow(View anchor) {
-        mPlatformSelector = new PopWrapSharePlatformSelector(mContext, anchor, new BaseSharePlatformSelector.OnShareSelectorDismissListener() {
-            @Override
-            public void onDismiss() {
-                onShareSelectorDismiss();
-            }
-        }, mShareItemClick);
-        mPlatformSelector.show();
-    }
 
     public void showShareFullScreenWindow(View anchor) {
-        mPlatformSelector = new PopFullScreenSharePlatformSelector(mContext, anchor, new BaseSharePlatformSelector.OnShareSelectorDismissListener() {
-            @Override
-            public void onDismiss() {
-                onShareSelectorDismiss();
-            }
-        }, mShareItemClick);
-        mPlatformSelector.show();
+        if(mPlatformSelector==null || null!=mPlatformSelector && !mPlatformSelector.isShow()) {
+            mPlatformSelector = new PopFullScreenSharePlatformSelector(mContext, anchor, new BaseSharePlatformSelector.OnShareSelectorDismissListener() {
+                @Override
+                public void onDismiss() {
+                    onShareSelectorDismiss();
+                }
+            }, mShareItemClick);
+            mPlatformSelector.show();
+        }
     }
 
     void onShareSelectorDismiss() {
@@ -100,8 +94,7 @@ public final class ShareHelper {
     private AdapterView.OnItemClickListener mShareItemClick = new AdapterView.OnItemClickListener() {
         @Override
         public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-            BaseSharePlatformSelector.ShareTarget item = (BaseSharePlatformSelector.ShareTarget) parent.getItemAtPosition(position);
-            shareTo(item);
+            shareTo((BaseSharePlatformSelector.ShareTarget) parent.getItemAtPosition(position));
             hideShareWindow();
         }
     };
